@@ -5,9 +5,22 @@
     box-sizing: border-box;
 }
 
+:root{
+    --BG-color: #fff;
+    --text-clolr: rgb(149, 138, 138);
+    --titel-color: #000;
+}
+
+.dark{
+    --BG-color: #000;
+    --text-clolr: #999;
+    --titel-color: #fff;
+
+}
+
 body{
-    background-color: #fff;
-    color: #555;
+    background-color: var(--BG-color);
+    color: var(--text-clolr);
 }
 
 .header{
@@ -42,13 +55,13 @@ nav ul li{
 
 nav ul li a{
     text-decoration: none;
-    color: #555;
+    color: var(--text-clolr);
     font-weight: 600;
 }
 .toggle-btn{
     background: #4864ff;
     margin-right: 100px;
-    color: #fff;
+    color: var(--BG-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -73,13 +86,14 @@ nav ul li a{
 
 .content h1{
      font-size: 80px;
-     color: #000;
+     color: var(--titel-color);
      font-weight: 600;
 }
 
 .content h1 span{
     color: #4864ff;
     font-family:cursive ;
+    
 }
 
 .content a{
@@ -92,4 +106,50 @@ nav ul li a{
     display: inline-block;
     margin-top: 30px;
 
+}
+
+.imgbox{
+    position: absolute;
+    bottom: 0;
+    right: 15%;
+}
+
+.imgbox img{
+    width: 300px;
+    display: block;
+}
+
+.bloob{
+    position: absolute;
+    top: 0;
+    left: 40%;
+    display: flex;
+    transform: rotate(20deg);
+    z-index: -1;
+}
+
+.bloob img{
+    width: 300px;
+    position: absolute;
+    top: o;
+    left: 0;
+    animation: move 1s linear infinite alternate-reverse;
+    
+}
+
+.bloob img:nth-child(1) {
+    transform: rotate(-45deg) translate(-70px, -50px);
+    animation-delay: .5s;
+}
+.bloob img:nth-child(2) {
+    transform: rotate(65deg) translate(0px, -40px) scale(.8);
+    animation-delay: 1.5s;
+}
+
+@keyframes move {
+    100%{
+        margin-left: 40px;
+        margin-top: 20px;
+        opacity: 0.3;
+    }
 }

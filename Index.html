@@ -17,7 +17,7 @@
                 <li><a href="#">Skill</a></li>
                 <li><a href="#">Contect</a></li>
             </ul>
-            <div class="toggle-btn">
+            <div class="toggle-btn" id="btn">
                 <span>Dark</span>
                 <img src="Img/moon.png" alt="moon">
 
@@ -31,11 +31,30 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum sapiente ipsam aliquam explicabo! Voluptas, autem.</p>
             <a href="#">Resume</a>
 
+        </div>
 
+        <div class="imgbox">
+            <img src="Img/abrar.png" alt="">
+
+            <div class="bloob">
+                <img src="Img/background.png" alt="">
+                <img src="Img/background.png" alt="">
+            </div>
         </div>
 
 
     </div>
     
+
+
+    <script>
+
+        let btn = document.getElementById("btn");
+
+        btn.onclick = function() {
+            document.body.classList.toggle("dark");
+
+        }
+    </script>
 </body>
 </html>
